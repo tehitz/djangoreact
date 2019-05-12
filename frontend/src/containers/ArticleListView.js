@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-import Article from '../components/Article'
+import Article from '../components/Article';
+import CustomForm from '../components/Form';
 
 class ArticleList extends React.Component {
 
@@ -18,9 +19,9 @@ class ArticleList extends React.Component {
             })
             .catch(function (error) {
                 if (error.response) {
-                    console.log(error.response.data)
-                    console.log(error.response.status)
-                    console.log(error.response.headers)
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
                 }
             })
 
@@ -28,8 +29,15 @@ class ArticleList extends React.Component {
 
     render() {
         return (
-            <Article data={this.state.article}/>
-
+            <div>
+                <Article data={this.state.article} />
+                <br />
+                <h2>Create an article</h2>
+                <CustomForm
+                    requestType="post"
+                    articleID={null}
+                    btnText="Create" />
+            </div>
         )
     }
 }
