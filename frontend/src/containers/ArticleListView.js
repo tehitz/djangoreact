@@ -1,13 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-
 import Article from '../components/Article';
 import CustomForm from '../components/Form';
 
 class ArticleList extends React.Component {
 
     state = {
-        article: []
+        article: [],
     }
 
     componentDidMount() {
@@ -25,18 +24,22 @@ class ArticleList extends React.Component {
                 }
             })
 
+
     }
+
 
     render() {
         return (
             <div>
-                <Article data={this.state.article} />
-                <br />
-                <h2>Create an article</h2>
-                <CustomForm
+                <div>
+                    <Article data={this.state.article}/>
+                    <br/>
+                    <h2> Create an article</h2>
+                    <CustomForm
                     requestType="post"
                     articleID={null}
                     btnText="Create" />
+                </div>
             </div>
         )
     }

@@ -32,7 +32,17 @@ const Article = (props) => {
                   title={<a href={`/posts/${item.id}`}>{item.title}</a>}
                   description={item.description}
                 />
-                {item.content}
+
+                  {(item.content).length > 680 ?
+
+                      item.content.substring(0, 680) + "..." :
+
+                      item.content
+
+                  }
+
+
+
               </List.Item>
             )}
           />

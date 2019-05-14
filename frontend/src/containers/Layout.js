@@ -1,4 +1,4 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
+import {Layout, Menu, Breadcrumb, } from 'antd';
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import * as actions from "../store/actions/auth";
