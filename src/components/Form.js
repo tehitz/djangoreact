@@ -17,7 +17,7 @@ class CustomForm extends React.Component {
                 }
 
             if(requestType === 'post') {
-                return axios.post('http://127.0.0.1:8000/api/', {
+                return axios.post('http://santerisiirila.me:8000/api/', {
                     title: title,
                     content: content
                 })
@@ -30,7 +30,7 @@ class CustomForm extends React.Component {
                 }}))}
 
             else if (requestType === 'put') {
-                return axios.put(`http://127.0.0.1:8000/api/${articleID}/`, {
+                return axios.put(`http://santerisiirila.me:8000/api/${articleID}/`, {
                     title: title,
                     content: content
                 })
