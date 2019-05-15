@@ -4,7 +4,7 @@ import Signup from './containers/Signup';
 import ArticleList from './containers/ArticleListView';
 import ArticleDetail from './containers/ArticleDetailView';
 import Login from './containers/Login';
-import HomeView from "./components/Home";
+import HomeView from "./containers/HomeView";
 
 const BaseRouter = () => (
         <div>

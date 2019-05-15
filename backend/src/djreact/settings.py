@@ -139,11 +139,13 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     # 'DEFAULT_PERMISSION_CLASSES': [
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-        #'rest_framework.permissions.AllowAny',
+        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication'
-    )#]
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    )
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -151,5 +153,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_EMAIL_REQUIRED = False
+
+CSRF_COOKIE_NAME = "csrftoken"
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username'

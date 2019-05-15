@@ -51,7 +51,6 @@ class CustomLayout extends React.Component {
                     <div style={{background: '#fff', padding: 24, minHeight: 280}}>{this.props.children}</div>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
-                    Ant Design ©2018 Created by Ant UED
                 </Footer>
             </Layout>
         );
