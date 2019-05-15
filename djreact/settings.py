@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0-gy%21%lya7wi1q1yhq&@^38w+*^k)0*x_v(ib!q=ea_+e0=k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['santerisiirila.me', '127.0.0.1']
+ALLOWED_HOSTS = ['santerisiirila.me', '46.101.186.91']
 
 
 # Application definition
@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'djreact.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blogdb',
+        'USER': 'admin',
+        'PASSWORD': 'pkZ7Hvbn##51',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
