@@ -38,7 +38,7 @@ class ArticleList extends React.Component {
                 <div>
                     <Article data={this.state.article}/>
                     <br/>
-                    {this.props.isAuthenticated ? <h2> Create an article</h2> : <h2></h2>}
+                    {this.props.isAuthenticated ? <h2> Create an article</h2> : <h2> </h2>}
                     <CustomForm
                     requestType="post"
                     articleID={null}
