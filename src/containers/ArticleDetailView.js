@@ -18,7 +18,7 @@ class ArticleDetail extends React.Component {
                     "Content-Type": "application/json",
                     Authorization: newProps.token
                 }
-                axios.get(`http://santerisiirila.me:8000/api/${articleID}/`, {crossdomain: true})
+                axios.get(`http://santerisiirila.me:80/api/${articleID}/`, {crossdomain: true})
                     .then(res => {
                         this.setState({
                             article: res.data
@@ -44,7 +44,7 @@ class ArticleDetail extends React.Component {
                     "Content-Type": "application/json",
                     Authorization: this.props.token
                 }
-        axios.delete(`http://santerisiirila.me:8000/api/${articleID}/`);
+        axios.delete(`http://santerisiirila.me:80/api/${articleID}/`);
         this.props.history.push('/');
         this.forceUpdate();
         }

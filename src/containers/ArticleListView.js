@@ -16,7 +16,7 @@ class ArticleList extends React.Component {
                 "Content-Type": "application/json",
                 Authorization: newProps.token
             }
-            axios.get('http://santerisiirila.me:8000/api/')
+            axios.get('http://santerisiirila.me:80/api/')
                 .then(res => {
                     this.setState({
                         article: res.data
